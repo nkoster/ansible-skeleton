@@ -1,0 +1,6 @@
+---
+
+- hosts: pvdevmongo01, pvdevmongo02
+  gather_facts: False
+  roles:
+  - { role: rc-local }

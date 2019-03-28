@@ -1,0 +1,3 @@
+- include: symon.yml
+  tags:
+  - symon

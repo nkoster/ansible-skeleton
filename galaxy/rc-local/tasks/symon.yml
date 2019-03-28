@@ -1,0 +1,11 @@
+- name: Test for Symon
+  shell: grep symon /etc/rc.local ; exit 0
+  register: test_symon
+
+- debug: msg="Hoi {{test_symon.stdout}}"
+
+- name: Add Symon to rc.local
+  lineinfile:
+    dest: /etc/rc.local
+    line: /usr/bin/symon -u
+  when: test_symon.stdout == ""
