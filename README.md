@@ -14,3 +14,7 @@ Simple Ansible skeleton that provides a role with a tag.
 │   └── hosts
 └── setup.yml
 ~~~
+
+### Usage
+
+```ansible-playbook --tags symon --limit pvdevmongo02 setup.yml```
